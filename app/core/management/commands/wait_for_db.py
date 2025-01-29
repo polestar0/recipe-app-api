@@ -2,13 +2,13 @@
 Django command to wait for the database to be available.
 """
 import time
-
 from psycopg2 import OperationalError as Psycopg2OpError
-
 from django.db.utils import OperationalError
 from django.core.management.base import BaseCommand
 
-# docker-compose run --rm app sh -c "python manage.py test  &&flake8"  this is the function to run link and test both
+
+# docker-compose run --rm app sh -c "python manage.py test && flake8"
+# This is the function to run lint and test both
 
 class Command(BaseCommand):
     """Django command to wait for database."""
